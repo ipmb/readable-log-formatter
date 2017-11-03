@@ -2,10 +2,11 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import unicode_literals
-import sys
-import unittest
-from readable_log_formatter import ReadableFormatter
+
 import logging
+import unittest
+
+from readable_log_formatter import ReadableFormatter
 
 log = logging.getLogger()
 log.setLevel(logging.NOTSET)
@@ -15,6 +16,10 @@ log.addHandler(hndl)
 
 
 class ReadableLogTests(unittest.TestCase):
+    """
+    These tests are just to make sure nothing crashes. Visual confirmation
+    can be done with the console output.
+    """
     def setUp(self):
         # start with a newline so the test output doesn't mess with alignment
         print("")
@@ -41,6 +46,8 @@ class ReadableLogTests(unittest.TestCase):
     def test_multiline(self):
         log.warning("This\nis\na\nfew\nlines.")
 
+
+class ClassSetupTests(unittest.TestCase):
     def test_args(self):
         """Verify the hard-coding of the format works"""
         arg = ReadableFormatter('no')
