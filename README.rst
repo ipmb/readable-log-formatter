@@ -1,5 +1,9 @@
 Pretty logs for local development.
 
+.. code-block:: python
+
+        pip install readable-log-formatter
+
 Provides the class ``readable_log_formatter.ReadableFormatter`` to be used
 with Python's logging:
 
