@@ -18,4 +18,5 @@ with Python's logging:
         hndl.setFormatter(ReadableFormatter())
         log.addHandler(hndl)
 
-.. image:: .screenshot.png
+.. image:: https://raw.githubusercontent.com/ipmb/readable-log-formatter/master/.screenshot.png
+    :alt: readable-log-formatter screenshot
