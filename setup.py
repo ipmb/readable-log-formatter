@@ -1,34 +1,27 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import os
+import subprocess
 import sys
 
-from setuptools import setup, Command
+from setuptools import setup
 
-version = '1.0.0'
-
-if sys.argv[-1] == 'publish':
-    os.system('python setup.py sdist upload')
-    print("You probably want to also tag the version now:")
-    print("  git tag -a %s -m 'version %s'" % (version, version))
-    print("  git push --tags")
-    sys.exit()
+version = '0.1.1'
 
 readme = open('README.rst').read()
 
 setup(
     name='readable-log-formatter',
     version=version,
-    description="""A fault-tolerant pylibmc cache backend for Django""",
+    description="""A human readable log formatter for Python""",
     long_description=readme,
     author='Peter Baumgartner',
     author_email='pete@lincolnloop.com',
-    url='https://github.com/lincolnloop/django-ft-cache',
+    url='https://github.com/ipmb/readable-log-formatter',
     py_modules=['readable_log_formatter'],
     test_suite='tests',
     license="BSD",
-    keywords='django-ft-cache',
+    keywords='readable-log-formatter',
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
